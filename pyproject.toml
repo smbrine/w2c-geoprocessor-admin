@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "w2c-geoprocessor-admin"
+version = "0.1.0"
+description = ""
+authors = ["smbrine <smbrine@yandex.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pydantic = "^2.6.3"
+pydantic-settings = "^2.2.1"
+sqlalchemy = "^2.0.28"
+asyncpg = "^0.29.0"
+greenlet = "^3.0.3"
+python-dotenv = "^1.0.1"
+geocoder = "^1.38.1"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.2.0"
+pylint = "^3.1.0"
+flake8 = "^7.0.0"
+
+[tool.poetry.group.admin.dependencies]
+fastapi = "^0.110.0"
+wtforms = "^3.1.2"
+sqladmin = { git = "https://github.com/smbrine/sqladmin.git", rev = "main", extras = ["full"] }
+psycopg2-binary = "^2.9.9"
+uvicorn = "^0.27.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
